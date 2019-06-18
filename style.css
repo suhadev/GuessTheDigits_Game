@@ -29,3 +29,9 @@ body{
     text-align: center;
     margin-left: 40%;
 }
+#instruction{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    margin-left: 0px;
+}

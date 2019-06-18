@@ -4,6 +4,7 @@ let selectedCircle
 let nextLineCounter = 0
 let selectedElement
 let rowCounter = 1
+let chances = 4
 function generateRandomNumber(max, min) {
     randomNumber = (Math.floor(Math.random() * (max - min) + min)).toString().split('')
 
@@ -22,6 +23,7 @@ function selectCircle(e,index) {
     }
 }
 function detectKey(event) {
+   
     selectedElement.innerHTML = event.key
     let valueEntered = event.key
     // console.log(randomNumber.indexOf(valueEntered))
@@ -41,7 +43,7 @@ function detectKey(event) {
     console.log(nextLineCounter)
     console.log(rowCounter)
     
-    if(nextLineCounter == 4 && rowCounter <= 4) {
+    if(nextLineCounter == 4 && rowCounter < 4) {
         rowCounter++
         console.log("next")
         document.getElementById("gameArea").innerHTML += `
@@ -54,13 +56,15 @@ function detectKey(event) {
                     </div>
                 </div>`
     nextLineCounter = 0
+    chances--
     
     console.log(rowCounter)
     }
-    if(rowCounter > 4) {
-        //alert("Game Over")
+    document.getElementById("instruction").innerHTML = "<h5>Guess the number behind each circle.You have "+chances+" chances</h5>"
+    if(rowCounter == 4 && nextLineCounter == 4) {
         document.getElementById("instruction").innerHTML = "<h2>Game Over!</h2>"
         document.getElementById("instruction").classList.add("gameOver")
-        nextLineCounter ++
+        
     }
+    
 }
