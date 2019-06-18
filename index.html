@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
+        
     </head>
     <body onkeyup="detectKey(event)">
         <div class="container">
@@ -15,10 +16,16 @@
                 </div>
                
             </div>
-            <div class="row" id="gameArea">
+            <div class="row text-center" style="margin-top:30px;" id="instruction">
                 <div class="col-lg-12">
+                        <h5>Guess the number behind each Circle. You have 5 chances!</h5>
+                </div>
+                
+            </div>
+            <div class="row text-center" id="gameArea" style="margin-top:10px;">
+                <div class="col-lg-12 text-center" style="margin-left:320px;">
                     <div class="row text-center">
-                            <div id="0" class="col-lg-1 circle-bg offset-md-4" onclick="selectCircle(event,0)">1</div>
+                            <div id="0" class="col-lg-1 circle-bg offset-md-6" onclick="selectCircle(event,0)">1</div>
                             <div id="1" class="col-lg-1 circle-bg" onclick="selectCircle(event,1)">2</div>
                             <div id="2" class="col-lg-1 circle-bg" onclick="selectCircle(event,2)">3</div>
                             <div id="3" class="col-lg-1 circle-bg" onclick="selectCircle(event,3)">4</div>
