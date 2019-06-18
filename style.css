@@ -1,0 +1,19 @@
+.circle-bg{
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+.selectedCircle{
+    background-color: aqua;
+}
+.correctNumber-Position{
+    background-color: green
+}
+.correctNumber-wrongPosition{
+    background-color: yellow;
+}
+.wrongNumber{
+    background-color: red;
+}
